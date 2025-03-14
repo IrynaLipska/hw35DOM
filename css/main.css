@@ -107,9 +107,12 @@ ol {
   background-repeat: no-repeat;
 }
 .main_trafic-light {
-  margin: 20px auto;
+  margin: 0 auto;
   background-image: url(../img/traffic-lights.jpg);
   background-repeat: no-repeat;
+  position: relative;
+  width: 800px;
+  background-size: contain;
 }
 
 h2 {
@@ -172,7 +175,14 @@ button:hover {
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.lights-buttons {
+.traffic-light {
+  position: absolute;
+  top: 30px;
+  right: 210px;
+  width: 100px;
+  padding: 15px;
+  border-radius: 10px;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -180,48 +190,29 @@ button:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
 }
 
-.lights {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-top: 30px;
-  margin-left: 500px;
-}
-.lights__red {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 50px;
-  height: 50px;
+.light {
+  width: 93px;
+  height: 93px;
   border-radius: 50%;
-  background-color: #fb0f0f;
+  background: gray;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
-.lights__yellow {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #c3f206;
+
+.red.active {
+  background: red;
 }
-.lights__green {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #06f21e;
+
+.yellow.active {
+  background: yellow;
+}
+
+.green.active {
+  background: green;
 }

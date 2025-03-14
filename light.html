@@ -12,16 +12,14 @@
       <button class="button" onclick="location.href='./index.html'">
         Home
       </button>
-      <div class="lights-buttons">
-        <button id="red" class="button">Red</button>
-        <button id="yellow" class="button">Yellow</button>
-        <button id="green" class="button">Green</button>
+      <div class="traffic-light">
+        <div class="light red active"></div>
+        <div class="light yellow"></div>
+        <div class="light green"></div>
       </div>
-      <div class="ligths">
-        <div id="redLight" class="ligths__red"></div>
-        <div id="yellowLight" class="ligths__yellow"></div>
-        <div id="greenLight" class="ligths__green"></div>
-      </div>
+
+      <button id="changeLight" class="button">Next</button>
     </main>
+    <script src="./js/light.js"></script>
   </body>
 </html>
